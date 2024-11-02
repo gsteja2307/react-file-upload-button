@@ -52,7 +52,10 @@ const App = () => (
         restrictFileSizeText="File too large. Max size is 5MB."
         FileSizeExceededButAllowedText="File size exceeds 5MB but will be uploaded."
         progressBarInterval={200}
-        uploadFileIcon={<img src="upload-icon.png" alt="Upload" style={{ width: '32px', height: '32px' }} />}
+        uploadFileIcon={<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+         <path d="M12 2L6.5 7.5H10V15H14V7.5H17.5L12 2Z" />
+         <path d="M18 18H6V20H18V18Z" />
+        </svg>}
         onError={(error) => console.log("Error:", error)}
         onFileUpload={(file) => console.log("File uploaded:", file)}
     />

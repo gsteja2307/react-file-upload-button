@@ -22,7 +22,7 @@ interface UploadButtonProps {
 	restrictFileSizeText?: string
 	FileSizeExceededButAllowedText?: string
 	progressBarInterval?: number
-	UploadFileIcon: ReactNode
+	UploadFileIcon?: ReactNode
 }
 
 interface FileInfo {
