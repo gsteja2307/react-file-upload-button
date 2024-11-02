@@ -1,0 +1,40 @@
+{
+  "name": "react-file-upload-button",
+  "author": "https://github.com/gsteja2307",
+  "version": "1.0.0",
+  "description": "A customizable React component for file upload with drag-and-drop functionality, progress bar, and file management.",
+  "main": "dist/UploadButton.js",
+  "types": "dist/UploadButton.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "vite",
+    "build:example": "vite build",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gsteja2307/react-file-upload-button.git"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  },
+  "license": "MIT",
+  "files": ["dist"],  
+  "keywords": [
+    "react",
+    "file upload",
+    "drag and drop",
+    "upload button",
+    "progress bar",
+    "file uploader"
+  ]
+}
