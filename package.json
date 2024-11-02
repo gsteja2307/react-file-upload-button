@@ -1,7 +1,7 @@
 {
   "name": "react-file-upload-button",
   "author": "https://github.com/gsteja2307",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A customizable React component for file upload with drag-and-drop functionality, progress bar, and file management.",
   "main": "dist/UploadButton.js",
   "types": "dist/UploadButton.d.ts",
