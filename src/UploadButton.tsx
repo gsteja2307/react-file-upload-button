@@ -23,6 +23,7 @@ interface UploadButtonProps {
 	FileSizeExceededButAllowedText?: string
 	progressBarInterval?: number
 	UploadFileIcon?: ReactNode
+	showPreview?: boolean
 	showFileIcon?: boolean
 }
 
@@ -30,6 +31,7 @@ interface FileInfo {
 	name: string
 	size: number
 	type: string
+	url?: string
 }
 
 const UploadButton: React.FC<UploadButtonProps> = ({
@@ -52,6 +54,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
 		<path d="M12 2L6.5 7.5H10V15H14V7.5H17.5L12 2Z" />
 		<path d="M18 18H6V20H18V18Z" />
 	</svg>,
+	showPreview = false,
 	showFileIcon = true,
 }) => {
 	const [isDragging, setIsDragging] = useState(false)
@@ -115,7 +118,8 @@ const UploadButton: React.FC<UploadButtonProps> = ({
 	}
 
 	const handleFileUpload = (file: File) => {
-		setFileInfo({ name: file.name, size: file.size, type: file.type })
+		const fileURL = URL.createObjectURL(file)
+		setFileInfo({ name: file.name, size: file.size, type: file.type, url: fileURL })
 		setUploading(true)
 		onFileUpload?.(file)
 
@@ -132,6 +136,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
 	}
 
 	const deleteFile = () => {
+		if (fileInfo?.url) URL.revokeObjectURL(fileInfo.url)
 		setFileInfo(null)
 		setUploadProgress(0)
 		setErrorMessage(null)
@@ -188,6 +193,9 @@ const UploadButton: React.FC<UploadButtonProps> = ({
 				<div className="uploaded-file">
 					<div className='uploaded-file-content'>
 						{showFileIcon && <div className="file-icon">{getFileIcon(fileInfo.type)}</div>}
+						{showPreview && fileInfo.url && fileInfo.type.startsWith('image') && (
+							<img src={fileInfo.url} alt={fileInfo.name} className="file-preview" style={{ width: '40px', height: '40px', marginRight: '10px' }} />
+						)}
 						<div className="file-details">
 							<div className='file-name'>{fileInfo.name}</div>
 							<div className='file-size'>{Math.round(fileInfo.size / 1024)} KB</div>
