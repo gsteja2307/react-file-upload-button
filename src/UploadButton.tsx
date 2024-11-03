@@ -1,5 +1,5 @@
 import React, { useState, CSSProperties, ReactNode } from 'react'
-
+import './UploadButton.css';
 interface UploadButtonProps {
 	maxSizeMB?: number
 	restrictFileSize?: boolean
