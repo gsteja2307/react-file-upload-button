@@ -82,7 +82,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
 		event.preventDefault()
 		setIsDragging(false)
 		const file = event.dataTransfer.files[0]
-		if (file) validateAndHandleFile(file)
+		if (file && !fileInfo) validateAndHandleFile(file)
 	}
 
 	const validateAndHandleFile = (file: File) => {
