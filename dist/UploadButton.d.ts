@@ -23,6 +23,8 @@ interface UploadButtonProps {
     FileSizeExceededButAllowedText?: string;
     progressBarInterval?: number;
     UploadFileIcon?: ReactNode;
+    showPreview?: boolean;
+    showFileIcon?: boolean;
 }
 declare const UploadButton: React.FC<UploadButtonProps>;
 export default UploadButton;
