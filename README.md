@@ -26,8 +26,36 @@ npm install react-file-upload-button
 
 ## Usage
 
-Here’s a basic example of how to use the `UploadButton` component:
+The UploadButton component is designed to be used out-of-the-box with zero configuration, but you can also customize it fully with various props.
 
+## Here’s a basic example of how to use the `UploadButton` component:
+
+For a simple implementation, just add the <UploadButton /> component, and it will render with default settings. No additional configuration or CSS imports are needed.
+
+```typescript
+import React from 'react'
+import UploadButton from 'react-file-upload-button'
+
+const App = () => (
+    <div>
+        <h1>Upload Your File</h1>
+        <UploadButton />
+    </div>
+)
+
+export default App
+
+```
+### By default, the component will:
+
+* Allow all file types for upload.
+* Set a maximum file size of 10 MB (this can be changed).
+* Show a basic drag-and-drop interface with upload progress.
+
+## Advanced Usage with Custom Props
+To customize the upload experience, you can pass various props to control file type restrictions, size limits, styles, custom icons, and callbacks for handling events like errors and file uploads.
+
+Here’s an example with all possible props:
 ```typescript
 import React from 'react'
 import UploadButton from 'react-file-upload-button'
@@ -63,6 +91,15 @@ const App = () => (
 
 export default App
 ```
+In this example:
+
+* File Restrictions: Limits uploads to PDF, JPG, and PNG files and restricts the maximum file size to 5MB.
+* Custom Styling: Applies custom styles to the upload area, progress bar, and error messages.
+* Icons: Displays different icons for each file type (PDF, image, Excel) and a default icon for others.
+* Custom Text: Changes the default upload text and subtext messages.
+* Callbacks:
+   * onError: Logs errors when there is an issue with the file upload.
+   * onFileUpload: Logs details when a file is successfully uploaded.
 
 ## Props
 
