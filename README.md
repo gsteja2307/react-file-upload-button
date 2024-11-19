@@ -121,6 +121,8 @@ In this example:
 | `FileSizeExceededButAllowedText` | `string`       | `File size exceeds the allowed limit of ${maxSizeMB} MB. File will still be uploaded.` | Message when file size exceeds limit but is still uploaded. |
 | `progressBarInterval`     | `number`               | `100`                                             | Interval (in ms) for upload progress increments. |
 | `uploadFileIcon`          | `ReactNode`            | `📤`                                              | Custom icon for the upload area. |
+| `showPreview`             | `boolean`              | false                                             | if true shows file preview       |
+| `showFileIcon`            | `boolean`              | true                                             | if true shows file icon           |
 
 ## Customization
 
