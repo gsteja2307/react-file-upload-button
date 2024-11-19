@@ -122,7 +122,7 @@ In this example:
 | `progressBarInterval`     | `number`               | `100`                                             | Interval (in ms) for upload progress increments. |
 | `uploadFileIcon`          | `ReactNode`            | `📤`                                              | Custom icon for the upload area. |
 | `showPreview`             | `boolean`              | false                                             | if true shows file preview       |
-| `showFileIcon`            | `boolean`              | false                                             | if true shows file icon           |
+| `showFileIcon`            | `boolean`              | true                                             | if true shows file icon           |
 
 ## Customization
 
