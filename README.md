@@ -5,6 +5,10 @@
 [![NPM downloads](https://img.shields.io/npm/dm/react-file-upload-button.svg)](https://www.npmjs.com/package/react-file-upload-button)
 [![GitHub stars](https://img.shields.io/github/stars/gsteja2307/react-file-upload-button.svg)](https://github.com/gsteja2307/react-file-upload-button/stargazers)
 
+Maintained by: [G Surya Teja](https://github.com/gsteja2307)
+
+Playground: https://gsuryateja.com/react-file-upload-button
+
 A customizable React component for file uploads with drag-and-drop functionality, progress bar, and file type restrictions. This component allows users to click or drag a file to upload, shows upload progress, supports custom icons, and lets users delete files after a successful upload.
 
 ## Features
